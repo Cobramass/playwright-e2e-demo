@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Demo Shop</h1>
+    <div class="cart-indicator" aria-live="polite">
+      Cart: <span data-testid="cart-count">0</span>
+    </div>
+  </header>
+
+  <!-- Login view -->
+  <main id="login-view" aria-label="Sign in">
+    <h2>Sign in</h2>
+    <form id="login-form" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="username" />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" />
+
+      <button type="submit">Sign in</button>
+      <p id="login-error" role="alert" hidden></p>
+    </form>
+    <p class="hint">Demo login: <code>buyer@example.com</code> / <code>correct horse</code></p>
+  </main>
+
+  <!-- Products view -->
+  <main id="products-view" aria-label="Products" hidden>
+    <h2>Products</h2>
+    <ul id="product-list" class="products"></ul>
+    <button type="button" data-testid="view-cart">View cart</button>
+  </main>
+
+  <!-- Cart view -->
+  <main id="cart-view" aria-label="Your cart" hidden>
+    <h2>Your cart</h2>
+    <ul id="cart-list" class="cart"></ul>
+    <p>Total: <strong data-testid="cart-total">£0.00</strong></p>
+    <button type="button" data-testid="back-to-products">Continue shopping</button>
+    <button type="button" data-testid="checkout">Checkout</button>
+    <p id="empty-cart" hidden>Your cart is empty.</p>
+  </main>
+
+  <!-- Confirmation view -->
+  <main id="confirmation-view" aria-label="Order confirmed" hidden>
+    <h2>Order confirmed</h2>
+    <p>Thank you. Your order reference is <strong data-testid="order-ref"></strong>.</p>
+    <button type="button" data-testid="new-order">Start a new order</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

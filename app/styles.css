@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #1a1a2e;
+}
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+h1 { font-size: 1.4rem; }
+form { display: grid; gap: 0.4rem; max-width: 320px; }
+label { font-weight: 600; font-size: 0.9rem; }
+input { padding: 0.5rem; border: 1px solid #bbb; border-radius: 6px; }
+button {
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-radius: 6px;
+  background: #3a3a98;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+button:hover { background: #2c2c78; }
+[role="alert"] { color: #b00020; font-weight: 600; }
+.products, .cart { list-style: none; padding: 0; display: grid; gap: 0.6rem; }
+.products li, .cart li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e2e2ea;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+.hint { color: #555; font-size: 0.85rem; }
+code { background: #f0f0f5; padding: 0 0.25rem; border-radius: 4px; }

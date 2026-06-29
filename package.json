@@ -1,0 +1,24 @@
+{
+  "name": "playwright-e2e-demo",
+  "version": "1.0.0",
+  "description": "Portfolio demo: a production-shaped Playwright E2E suite — Page Object Model, custom fixtures, role-based locators, web-first assertions, full isolation, CI with a flake-check (repeat-each) and a published HTML report.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "serve": "node server.mjs",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "flake-check": "playwright test --repeat-each=10 --project=chromium",
+    "report": "playwright show-report",
+    "lint": "eslint ."
+  },
+  "keywords": ["playwright", "test-automation", "e2e", "qa", "ci"],
+  "author": "Matthew Daly",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-playwright": "^2.0.0"
+  }
+}
