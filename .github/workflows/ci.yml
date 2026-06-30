@@ -59,7 +59,7 @@ jobs:
   publish-report:
     name: publish HTML report to Pages
     needs: [e2e]
-    if: ${{ github.ref == 'refs/heads/main' && always() }}
+    if: ${{ github.ref == 'refs/heads/master' && always() }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
