@@ -1,5 +1,7 @@
 # Playwright E2E demo — a suite you can trust
 
+[![e2e](https://github.com/Cobramass/playwright-e2e-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/Cobramass/playwright-e2e-demo/actions/workflows/ci.yml)
+
 A production-shaped end-to-end test suite for a small web app (login → browse → cart →
 checkout). It's a portfolio demo, but it's built to the bar that separates a test suite a team
 actually relies on from one they delete after a week of false alarms.
